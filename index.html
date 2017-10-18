@@ -1,0 +1,155 @@
+<idoctype html>
+<head>
+	<meta charset = "utf-8">
+	<link href='normalize.css' rel="stylesheet">
+	<link href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+	<style>
+		html { font-family: 'Spoqa Han Sans'; font-weight: 150;}
+		.section{height:600px;width:100%;position: relative}
+		header{height:300px; background: black;width:100%; transition: all 0.3s}
+		header #logo{width:700px;text-align: center;height:44px;line-height: 44px;font-size: 1.3em;font-weight: 700;position:relative;left:calc(50% - 100px);transition: all 1s;color:white}
+		header #menu{width:700px;height:50px;position:relative;left:calc(50% - 100px);top:80px;transition: all 1s;font-size:8px;font-weight:bold;}
+		header li{width:100px;height:100px;color:black;background: white;float:left;border-radius: 30px;text-align: center;line-height: 100px;color:black;font-size: 3em;margin-left: 20px;margin-right:20px;}
+		h1{color:white;font-size: 3em;text-align: center;padding-top:280px; line-height: 1.2;padding-left: 100px;padding-right: 100px;letter-spacing: -1px;}
+		#sectionA{background: url('./킹스맨.gif');background-size:100% auto;background-height: 25px;background-position: 0px -120px; }
+		#sectionB{  background: url('./her.jpg');background-size:40% auto;background-position: 0px -120px; }
+		#sectionC{ background: url('./영화촬영.jpg');background-size:100% auto;background-position: 0px -120px; }
+		#sectionD{ background: url('./킹스맨2.jpg');background-size:50% auto;background-position: 0px -120px;}
+		#sectionE{  background: url('./사무엘 잭슨.jpg');background-size:50% auto;background-position: 0px -120px; }
+
+		#titleA{transition: all 1s;}
+		#titleB{transition: all 1s;}
+		#titleC{transition: all 1s;}
+		#titleD{transition: all 1s;}
+		#titleE{transition: all 1s;}
+	</style>
+	<audio autoplay="" loop="">
+    <source src="gnash - i hate u, i love u.mp3" type="audio/ogg">
+    </audio>
+</head>
+<body>
+<header id="header">
+	<div id="logo">영화를 통해 감독을 보다.</div>
+	<div id="menu">
+		<ul>
+			<li id="menuA">Movie</li>
+			<li id="menuB">Directer</li>
+			<li id="menuC">Effact</li>
+			<li id="menuD">Remake</li>
+			<li id="menuE">Acter</li>
+		</ul>
+	</div>
+</header>
+<div class="section" id="sectionA">
+	<h1 id="titleA">Movie</h1>
+</div>
+<div class="section" id="sectionB">
+	<h1 id="titleB">Directer</h1>
+</div>
+<div class="section" id="sectionC">
+	<h1 id="titleC">Effect</h1>
+</div>
+<div class="section" id="sectionD">
+	<h1 id="titleD">Remake</h1>
+</div>
+<div class="section" id="sectionE">
+	<h1 id="titleE">Acter</h1>
+</div>
+<div class="section" id="sectionF">
+	<h1 id="titleF">영화를 통해 감독을 보다.</h1>
+</div>
+<script>
+	window.onscroll = function(){
+		console.log(document.body.scrollTop);
+		var scrollH = document.body.scrollTop;
+		if(scrollH > 50){
+			header.style.height = "44px";
+			header.style.position = "fixed";
+			header.style.top = "0px";
+			header.style.zIndex = "9999";
+			menu.style.left = "600px";
+			menu.style.top = "-50px";
+			logo.style.left = "0px";
+			sectionA.style.marginTop = "44px";
+		}else{
+			header.style.height = "300px";
+			header.style.position = "relative";
+			header.style.top = "0px";
+			logo.style.left = "calc(50% - 100px)";
+			menu.style.left = "500px";
+			menu.style.top = "80px";
+			sectionA.style.marginTop = "0px";
+
+		}
+
+		if(scrollH > 280){
+			titleA.style.paddingTop = "500px";
+			menuA.style.background = "#BDBDBD";
+			sectionA.style.backgroundAttachment = "fixed"
+			titleA.style.fontSize = "2em";
+		}else{
+			titleA.style.paddingTop = "280px";
+			menuA.style.background = "white";
+			sectionA.style.backgroundAttachment = "scroll"
+			titleA.style.fontSize = "2em";
+		}
+
+		if(scrollH > 680){
+			titleB.style.paddingTop = "500px";
+			titleB.style.transform = "rotateY(180deg)";
+			menuB.style.background = "#BDBDBD";
+		    sectionB.style.backgroundAttachment = "fixed";
+		    titleB.style.fontSize = "2em";
+		}
+
+		else{
+			titleB.style.paddingTop = "280px";
+			titleB.style.transform = "rotateY(0deg)";
+			menuB.style.background = "white";
+            sectionB.style.backgroundAttachment = "scroll";
+            titleB.style.fontSize = "2em";
+		}
+
+		if(scrollH > 1198){
+			sectionC.style.backgroundAttachment = "fixed";
+			menuC.style.background = "#BDBDBD";
+			titleC.style.fontSize = "2em";titleD.style.fontSize = "2em";
+		}else{
+			sectionC.style.backgroundAttachment = "scroll";
+			menuC.style.background = "white";
+		    titleC.style.fontSize = "2em";
+		}
+
+		if(scrollH > 1816){
+			sectionD.style.backgroundAttachment = "fixed";
+			menuD.style.background = "#BDBDBD";
+			titleD.style.fontSize = "2em";
+		}else{
+			sectionD.style.backgroundAttachment = "scroll";
+			titleD.style.color = "white";
+			menuD.style.background = "white";
+		    titleD.style.fontSize = "2em";
+		}
+
+		if(scrollH > 2400){
+			titleE.style.fontSize = "2em";
+			titleE.style.fontWeight = "700";
+			menuE.style.background = "#BDBDBD";
+			sectionE.style.backgroundAttachment = "fixed"
+		}else{
+			titleE.style.fontSize = "2em";
+			titleE.style.fontWeight = "200";
+			menuE.style.background = "white";
+		}
+         if(scrollH > 2800){
+		 sectionF.style.background = "black";
+         titleF.style.color = "white";
+         }
+         else{
+      	sectionF.style.background = "white";
+         titleF.style.color = "white";
+         titleF.style.fontSize="2em"
+        }
+	}
+</script>
+</body>
